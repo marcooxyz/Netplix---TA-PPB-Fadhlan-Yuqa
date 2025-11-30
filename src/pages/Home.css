@@ -1,0 +1,175 @@
+/* Basic Styling */
+.home-container {
+    padding: 20px;
+    color: white;
+    background-color: #111;
+  }
+  
+  h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #e5e5e5;
+    margin-bottom: 20px;
+  }
+  
+  /* Netflix Logo */
+  .netflix-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+  }
+  
+  .netflix-logo-img {
+    width: 120px; /* Adjust size as needed */
+    height: auto;
+  }
+  
+  /* Hero Section with Background Image */
+  .hero-section {
+    position: relative;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+  }
+  
+  .hero-content {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    max-width: 400px;
+    color: white;
+  }
+  
+  /* Title and Description */
+  .hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .hero-description {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Play Button Styled Like Netflix */
+  .hero-play-button {
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgba(229, 9, 20, 0.8); /* Netflix Red */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .hero-play-button:hover {
+    background-color: rgba(229, 9, 20, 1); /* Darker red on hover */
+    transform: scale(1.05); /* Slight scale effect for button hover */
+  }
+  
+  .hero-play-button:active {
+    transform: scale(0.98); /* Pressed button effect */
+  }
+  
+  /* Movie Cards */
+  .home-movies-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .home-movie-item {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .home-movie-poster {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Fade In for Hero Section */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Smooth Transition between featured movies */
+  .hero-section {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    /* Adjust Hero Section Height */
+    .hero-section {
+      height: 300px;
+    }
+  
+    /* Adjust Hero Title and Description for Smaller Screens */
+    .hero-title {
+      font-size: 2rem;
+    }
+  
+    .hero-description {
+      font-size: 1rem;
+    }
+  
+    .hero-content {
+      left: 10px;
+      max-width: 80%;
+    }
+  
+    /* Adjust Play Button Size */
+    .hero-play-button {
+      padding: 12px 20px;
+      font-size: 16px;
+    }
+  
+    /* Adjust Movie Poster Size on Mobile */
+    .home-movie-poster {
+      height: 250px; /* Smaller poster height for mobile */
+    }
+  
+    /* Stack Movie Cards vertically */
+    .home-movies-list {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Further reduce the font size on very small screens */
+    .hero-title {
+      font-size: 1.5rem;
+    }
+  
+    .hero-description {
+      font-size: 0.9rem;
+    }
+  
+    /* Further adjust Play Button size */
+    .hero-play-button {
+      padding: 10px 18px;
+      font-size: 14px;
+    }
+  
+    /* Adjust Movie Poster size for very small screens */
+    .home-movie-poster {
+      height: 200px; /* Even smaller poster height */
+    }
+  }
+  

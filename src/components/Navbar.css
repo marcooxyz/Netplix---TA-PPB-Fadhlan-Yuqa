@@ -1,0 +1,46 @@
+/* Styling untuk Logo Netflix */
+.navbar-logo-container {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);  /* Memastikan logo berada di tengah */
+    z-index: 100;
+    margin-top: 15px; /* Increased margin for more space above */
+  }
+  
+  .navbar-logo-img {
+    width: 100px;  /* Increased size of Netflix logo */
+    object-fit: contain;
+  }
+  
+  /* Styling untuk Navbar Menu */
+  .navbar-menu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;  /* Increased padding for a larger navbar */
+    z-index: 50;  /* Pastikan navbar ada di bawah logo */
+  }
+  
+  .navbar-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;  /* Increased gap between links */
+  }
+  
+  .navbar-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;  /* Increased font size */
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .navbar-link:hover {
+    color: #e50914;  /* Warna merah Netflix saat hover */
+  }
+  

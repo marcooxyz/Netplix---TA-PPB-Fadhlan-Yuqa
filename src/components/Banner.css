@@ -1,0 +1,15 @@
+.banner {
+    color: white;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+  }
+  .banner-contents h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
