@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getMovieDetails } from "../api/tmdb"; // Ganti sesuai dengan API yang digunakan
+import { getMovieDetails } from "../api/api";
 import "./MovieDetail.css";
 //adw
 

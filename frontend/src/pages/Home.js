@@ -16,11 +16,19 @@ const Home = () => {
       const topRated = await getMoviesByCategory('top_rated');
       const popular = await getMoviesByCategory('popular');
       const upcoming = await getMoviesByCategory('upcoming');
-      setTopRatedMovies(topRated);
-      setPopularMovies(popular);
-      setUpcomingMovies(upcoming);
+      
+      const validTopRated = Array.isArray(topRated) ? topRated : [];
+      const validPopular = Array.isArray(popular) ? popular : [];
+      const validUpcoming = Array.isArray(upcoming) ? upcoming : [];
+
+      setTopRatedMovies(validTopRated);
+      setPopularMovies(validPopular);
+      setUpcomingMovies(validUpcoming);
+      
       // Set a random featured movie from the top-rated movies
-      setFeaturedMovie(topRated[Math.floor(Math.random() * topRated.length)]);
+      if (validTopRated.length > 0) {
+        setFeaturedMovie(validTopRated[Math.floor(Math.random() * validTopRated.length)]);
+      }
     };
 
     fetchMovies();
